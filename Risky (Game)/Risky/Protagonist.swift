@@ -11,9 +11,9 @@ import SpriteKit
 struct PhysicsCategory {
     static let none: UInt32 = 0
     static let Protagonist: UInt32 = 0b1
-    static let Trap: UInt32 = 0b10
+    static let Items: UInt32 = 0b10
     static let Enemy: UInt32 = 0b100
-    static let Part: UInt32 = 0b1000
+    static let Misc: UInt32 = 0b1000
 }
 
 class Protagonist: SKSpriteNode {
@@ -23,9 +23,9 @@ class Protagonist: SKSpriteNode {
     
     
     init() {
-        name = "Protagonist"
         let texture = SKTexture(imageNamed: "foxPro")
         super.init(texture: texture, color: UIColor.clear, size: texture.size())
+        name = "Protagonist"
 //        This snippet animates the fox.
 //        var textures = [SKTexture]()
 //        for i in 1...5 {
@@ -33,7 +33,7 @@ class Protagonist: SKSpriteNode {
 //        }
         physicsBody = SKPhysicsBody(circleOfRadius: 25)
         physicsBody!.categoryBitMask = PhysicsCategory.Protagonist
-        physicsBody!.contactTestBitMask = PhysicsCategory.Enemy | PhysicsCategory.Totem
+        physicsBody!.contactTestBitMask = PhysicsCategory.Enemy | PhysicsCategory.Items
         physicsBody!.collisionBitMask = PhysicsCategory.none
         physicsBody!.affectedByGravity = false
         physicsBody!.allowsRotation = false
