@@ -10,28 +10,50 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
-    
-    //jajdjdja
+class GameViewController: UIViewController, GameProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            //view.showsFPS = true
-            //view.showsNodeCount = true
+        OpeningScene()
         }
+    
+    func OpeningScene() {
+        if let theScene = SKScene(fileNamed: "OpeningScene") {
+            massageScene(scene: theScene)
+        }
+    }
+    
+    func GameScene() {
+        if let theScene = SKScene(fileNamed: "GameScene") {
+            massageScene(scene: theScene)
+        }
+    }
+    
+    func GameOver() {
+        if let theScene = SKScene(fileNamed: "GameOver") {
+            massageScene(scene: theScene)
+        }
+    }
+    
+    
+    func massageScene(scene: SKScene) {
+        
+        let skView = self.view as! SKView
+        let ss = scene as? SceneProtocol
+        ss?.setController(controller: self)
+        
+        skView.showsFPS = false
+        skView.showsNodeCount = false
+        skView.showsPhysics = false
+        
+        /* Sprite Kit applies additional optimizations to improve rendering performance */
+        skView.ignoresSiblingOrder = true
+        
+        /* Set the scale mode to scale to fit the window */
+        scene.scaleMode = .resizeFill
+        
+        skView.presentScene(scene)
+        
     }
 
     override var shouldAutorotate: Bool {
