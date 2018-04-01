@@ -13,36 +13,24 @@ class Score: NSObject {
     
     // MARK: - Properties
     
-    var score: String
-    var starttime = Date()
-    var endtime = Date()
     var riskscore: Int
-    var finaltime: Int
+    var ticker: String
     
     // 1
     private static var _current: Score?
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let score = dict["Score"] as? String,
-            let starttime = dict["Start Time"] as? Date,
-            let endtime = dict["End Time"] as? Date,
             let riskscore = dict["Risk Score"] as? Int,
-            let finaltime = dict["Final Time"] as? Int
+            let ticker = dict["Ticker"] as? String
             else { return nil }
         
-        self.score = score
-        self.starttime = starttime
-        self.endtime = endtime
         self.riskscore = riskscore
-        self.finaltime = finaltime
+        self.ticker = ticker
     }
     
-    init(score: String, starttime: Date, endtime: Date, riskscore: Int, finaltime: Int) {
-        self.score = score
-        self.starttime = starttime
-        self.endtime = endtime
+    init(score: String, starttime: Date, endtime: Date, riskscore: Int, ticker: String) {
         self.riskscore = riskscore
-        self.finaltime = finaltime
+        self.ticker = ticker
     }
 }
