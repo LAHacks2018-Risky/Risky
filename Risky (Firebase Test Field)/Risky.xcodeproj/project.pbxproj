@@ -21,6 +21,8 @@
 		9DB283572070506400838594 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB283562070506400838594 /* CreateUsernameViewController.swift */; };
 		9DB283592070629500838594 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB283582070629500838594 /* UserService.swift */; };
 		9DB2835B20706C1F00838594 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2835A20706C1F00838594 /* Constants.swift */; };
+		9DB2835F20708A5C00838594 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2835E20708A5C00838594 /* Score.swift */; };
+		9DB2836120708C9F00838594 /* ScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB2836020708C9F00838594 /* ScoreService.swift */; };
 		B1DCEEC1903EA80C83A1BDD8 /* Pods_Risky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6092E9E298D3BD85CF7DCB89 /* Pods_Risky.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		9DB283562070506400838594 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		9DB283582070629500838594 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9DB2835A20706C1F00838594 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9DB2835E20708A5C00838594 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		9DB2836020708C9F00838594 /* ScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB2835420703C7900838594 /* User.swift */,
+				9DB2835E20708A5C00838594 /* Score.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB283582070629500838594 /* UserService.swift */,
+				9DB2836020708C9F00838594 /* ScoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -322,8 +328,10 @@
 			files = (
 				9DB2834320702EE300838594 /* LoginViewController.swift in Sources */,
 				9DB2831A2070213200838594 /* ViewController.swift in Sources */,
+				9DB2836120708C9F00838594 /* ScoreService.swift in Sources */,
 				9DB2835520703C7900838594 /* User.swift in Sources */,
 				9DB2834E2070313500838594 /* DatabaseReference+Location.swift in Sources */,
+				9DB2835F20708A5C00838594 /* Score.swift in Sources */,
 				9DB283592070629500838594 /* UserService.swift in Sources */,
 				9DB283182070213200838594 /* AppDelegate.swift in Sources */,
 				9DB28353207033EF00838594 /* Storyboard+Utility.swift in Sources */,
