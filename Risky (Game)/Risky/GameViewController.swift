@@ -14,7 +14,7 @@ class GameViewController: UIViewController, GameProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GameScene()
+        OpeningScene()
         }
     
     func OpeningScene() {
